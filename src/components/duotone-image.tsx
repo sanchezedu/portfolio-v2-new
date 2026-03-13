@@ -139,14 +139,13 @@ const DuotoneImage: React.FC<DuotoneImageProps> = ({
     return start * (1 - amount) + end * amount;
   };
 
-  if (!processedImageUrl) {
-    return null;
-  }
+  const resolvedSrc =
+    processedImageUrl || (typeof src === "string" ? src : src.src);
 
   return (
     <Image
       {...props}
-      src={processedImageUrl}
+      src={resolvedSrc}
       width={width}
       height={height}
       className={className}

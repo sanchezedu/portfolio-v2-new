@@ -21,7 +21,7 @@ export default function SkillsShowcase({ skills }: SkillsShowcaseProps) {
     <section className="overflow-hidden px-6 py-32 sm:px-14 md:px-20">
       <div className="relative mx-auto max-w-7xl">
         <h2 className="text-xl font-semibold text-accent sm:text-4xl">
-          Skills
+          Habilidades
         </h2>
         {skills.map((section) => (
           <AnimatePresence key={section.sectionName}>

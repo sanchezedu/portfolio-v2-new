@@ -1,4 +1,4 @@
-import { NextSeo } from "next-seo";
+﻿import { NextSeo } from "next-seo";
 
 import AboutHero from "@/components/about-hero";
 import ExperienceShowcaseList from "@/components/experience/experience-showcase-list";
@@ -10,18 +10,18 @@ export default function About() {
   return (
     <>
       <NextSeo
-        title="Sobre Darth Gaming | Desarrollador Web"
-        description="Conoce más sobre Darth Gaming, desarrollador web especializado en Next.js, React y Tailwind CSS. Descubre mi trayectoria, habilidades y pasión por crear soluciones web innovadoras."
+        title="Sobre Sanchezedu | Desarrollador Web"
+        description="Conoce más sobre Sanchezedu, desarrollador web especializado en Next.js, React y Tailwind CSS. Descubre mi trayectoria, habilidades y pasión por crear soluciones web innovadoras."
         canonical={`${siteMetadata.siteUrl}/about`}
         openGraph={{
           url: `${siteMetadata.siteUrl}/about`,
-          title: "Sobre Darth Gaming - Desarrollador Web",
+          title: "Sobre Sanchezedu - Desarrollador Web",
           description:
-            "Descubre la historia de Darth Gaming, desarrollador web. Explora las experiencias, habilidades y pasión que impulsan la creación de soluciones web excepcionales.",
+            "Descubre la historia de Sanchezedu, desarrollador web. Explora las experiencias, habilidades y pasión que impulsan la creación de soluciones web excepcionales.",
           images: [
             {
               url: `${siteMetadata.siteUrl}${siteMetadata.twitterImage}`,
-              alt: "Darth Gaming - Portfolio",
+              alt: "Sanchezedu - Portfolio",
             },
           ],
           siteName: siteMetadata.siteName,
@@ -39,8 +39,8 @@ export default function About() {
         ]}
       />
       <AboutHero />
-      <ExperienceShowcaseList title="Experience" details={EXPERIENCE} />
-      <ExperienceShowcaseList title="Education" details={EDUCATION} />
+      <ExperienceShowcaseList title="Experiencia" details={EXPERIENCE} />
+      <ExperienceShowcaseList title="Educación" details={EDUCATION} />
     </>
   );
 }

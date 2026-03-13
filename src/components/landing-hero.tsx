@@ -1,9 +1,8 @@
-import { useEffect, useRef, useState } from "react";
+﻿import { useEffect, useRef, useState } from "react";
 
 import { AnimatePresence, motion } from "framer-motion";
-import Image from "next/image";
-
 import FadeUp from "@/animation/fade-up";
+import DuotoneImage from "@/components/duotone-image";
 
 export default function LandingHero() {
   const [scrollY, setScrollY] = useState(0);
@@ -39,37 +38,41 @@ export default function LandingHero() {
         <div className="mx-auto max-w-7xl">
           <div className="flex flex-col items-center gap-8 md:flex-row md:items-start">
             <div className="flex-shrink-0">
-              <Image
-                src="https://avatars.githubusercontent.com/u/40375199?v=4"
-                alt="Darth Gaming - Foto de perfil"
-                width={120}
-                height={120}
-                className="rounded-full border-4 border-accent shadow-lg"
+              <DuotoneImage
+                src="/images/profile.png"
+                alt="Sanchezedu - Foto de perfil"
+                width={140}
+                height={140}
+                className="h-[140px] w-[140px] rounded-full border-4 border-accent shadow-lg"
+                lightColor="#F1E6FF"
+                darkColor="#3B1B55"
+                contrastFactor={1.1}
+                sharpnessFactor={0.4}
               />
             </div>
             <div className="flex-1 text-center md:text-left">
               <AnimatePresence>
                 <FadeUp key="title-main" duration={0.6}>
                   <h1 className="bg-accent bg-clip-text py-2 text-5xl font-bold text-transparent sm:text-6xl md:text-7xl xl:text-8xl">
-                    Darth Gaming
+                    Sanchezedu
                   </h1>
                   <span className="text-xl font-semibold text-zinc-900 dark:text-zinc-100 md:text-3xl">
-                    Desarrollador Web
+                    Ingeniero Civil & Desarrollador Web
                   </span>
                 </FadeUp>
                 <FadeUp key="description" duration={0.6} delay={0.2}>
                   <div className="mt-8 max-w-3xl text-base font-semibold text-zinc-900 dark:text-zinc-200 sm:text-base md:text-xl">
                     <span>
-                      Construyo experiencias web rápidas y modernas con{" "}
+                      Construyo experiencias web con personalidad, enfoque en
+                      negocio y resultados reales. Trabajo con{" "}
                     </span>
                     <span className="font-semibold text-accent">Next.js</span>,{" "}
                     <span className="font-semibold text-accent">React</span> y{" "}
                     <span className="font-semibold text-accent">
                       Tailwind CSS
                     </span>
-                    . Me gusta crear sitios con personalidad y buen rendimiento.
-                    Especializado en landing pages, tiendas en línea y
-                    soluciones corporativas para negocios locales.
+                    . Especializado en landing pages, dashboards, e-commerce y
+                    soluciones con bases de datos para emprendimientos.
                   </div>
                 </FadeUp>
               </AnimatePresence>

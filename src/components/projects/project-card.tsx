@@ -41,17 +41,19 @@ export default function ProjectCard(props: ProjectCardProps) {
           <a
             href={props.sourceCodeHref}
             target="_blank"
+            rel="noopener noreferrer"
             className="flex items-center gap-1 text-xs underline md:text-sm"
           >
-            <GithubIcon className="h-5 w-5" /> Source code
+            <GithubIcon className="h-5 w-5" /> Código
           </a>
           {props.liveWebsiteHref && (
             <a
               href={props.liveWebsiteHref}
               target="_blank"
+              rel="noopener noreferrer"
               className="flex items-center gap-1 text-xs underline md:text-sm"
             >
-              <FiExternalLink className="h-5 w-5" /> Live
+              <FiExternalLink className="h-5 w-5" /> Ver
             </a>
           )}
         </div>

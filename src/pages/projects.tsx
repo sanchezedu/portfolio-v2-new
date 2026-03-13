@@ -1,4 +1,4 @@
-import { NextSeo } from "next-seo";
+﻿import { NextSeo } from "next-seo";
 
 import ProjectCard from "@/components/projects/project-card";
 import { PROJECTS_CARD } from "@/data/projects";
@@ -8,18 +8,18 @@ export default function Projects() {
   return (
     <>
       <NextSeo
-        title="Proyectos | Darth Gaming"
-        description="Descubre los proyectos web construidos por Darth Gaming. Landing pages, tiendas en línea y sitios corporativos con Next.js y Tailwind CSS."
+        title="Proyectos | Sanchezedu"
+        description="Descubre los proyectos web construidos por Sanchezedu. Landing pages, tiendas en línea y sitios corporativos con Next.js y Tailwind CSS."
         canonical={`${siteMetadata.siteUrl}/projects`}
         openGraph={{
           url: `${siteMetadata.siteUrl}/projects`,
-          title: "Proyectos | Darth Gaming",
+          title: "Proyectos | Sanchezedu",
           description:
             "Portafolio de proyectos web creados con Next.js, Tailwind CSS y diseño responsivo.",
           images: [
             {
               url: `${siteMetadata.siteUrl}${siteMetadata.twitterImage}`,
-              alt: "Darth Gaming - Portfolio Image",
+              alt: "Sanchezedu - Portfolio Image",
             },
           ],
           siteName: siteMetadata.siteName,

@@ -1,37 +1,37 @@
-import { type ExperienceShowcaseListItemProps } from "@/components/experience/experience-showcase-list-item";
+﻿import { type ExperienceShowcaseListItemProps } from "@/components/experience/experience-showcase-list-item";
 
 export const EDUCATION: ExperienceShowcaseListItemProps[] = [
   {
-    title: "Bachelor Of Engineering in Electronics and Telecommunication",
+    title: "Ingeniería Civil",
     organisation: {
-      name: "Rizvi College Of Engineering",
-      href: "https://eng.rizvi.edu.in/",
+      name: "ESPOL",
+      href: "https://www.espol.edu.ec/",
     },
-    date: "2019-2023",
-    location: "Bandra, Mumbai",
+    date: "2016 - 2021",
+    location: "Guayaquil, Ecuador",
     description:
-      "Relevant courses included Data Structures and Algorithms, Web Design, Cloud Computing, Artificial Neural Network and Database Management.",
+      "Graduado en Ingeniería Civil. Formación sólida en análisis, planificación de proyectos y resolución de problemas complejos.",
   },
   {
-    title: "Higher Secondary School",
+    title: "Especializaciones en Programación",
     organisation: {
-      name: "Mithibai College",
-      href: "https://www.mithibai.ac.in/",
+      name: "Cursos Online",
+      href: "https://www.coursera.org/",
     },
-    date: "2016-2018",
-    location: "Vile Parle, Mumbai",
+    date: "2020 - 2024",
+    location: "Remoto",
     description:
-      "Completed the course in Electronics Bifocal Science with 68%. Started freelancing making 3D assets for games. Got interested in game development and learned unity and c#",
+      "Cursos de desarrollo web moderno, bases de datos, buenas prácticas de arquitectura y performance.",
   },
   {
-    title: "Secondary School Education",
+    title: "Inteligencia Artificial Aplicada",
     organisation: {
-      name: "Holy Family High School",
-      href: "https://holyfamilyandheri.org/",
+      name: "Certificaciones",
+      href: "https://www.edx.org/",
     },
-    date: "2017-2018",
-    location: "Andheri, Mumbai",
+    date: "2022 - 2024",
+    location: "Remoto",
     description:
-      "Learned good values,dedication and disciplne. Played district football for 5 years.",
+      "Formación en modelos de IA, automatización de procesos y uso de herramientas para acelerar soluciones digitales.",
   },
 ];

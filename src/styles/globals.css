@@ -1,4 +1,4 @@
-@tailwind base;
+﻿@tailwind base;
 @tailwind components;
 @tailwind utilities;
 
@@ -9,7 +9,7 @@
     --border: 220 10% 90%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
-    --accent: 270 78.9% 22.4%;
+    --accent: 285 80% 55%;
     --accent-foreground: 0 0% 98%;
     --muted: 220 10% 95%;
     --muted-foreground: 220 10% 40%;
@@ -21,10 +21,10 @@
     --border: 240 10% 12%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
-    --accent: 270 78.9% 22.4%;
+    --accent: 285 88% 66%;
     --accent-foreground: 0 0% 98%;
     --muted: 240 14% 13.7%;
-    --muted-foreground: 0 0% 70%;
+    --muted-foreground: 240 5% 64.9%;
   }
 
   * {
@@ -32,5 +32,21 @@
   }
   body {
     @apply min-h-screen bg-background text-foreground;
+    background-image: radial-gradient(
+        600px circle at 12% 12%,
+        hsl(var(--accent) / 0.12),
+        transparent 55%
+      ),
+      radial-gradient(
+        800px circle at 88% 18%,
+        hsl(var(--accent) / 0.08),
+        transparent 60%
+      ),
+      radial-gradient(
+        700px circle at 40% 90%,
+        hsl(var(--accent) / 0.06),
+        transparent 60%
+      );
+    background-attachment: fixed;
   }
 }

@@ -1,6 +1,6 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { useRouter } from "next/router";
 
 import { AnimatePresence, motion } from "framer-motion";
 
@@ -22,7 +22,13 @@ export interface NavbarProps {
 }
 
 export default function Navbar(props: NavbarProps) {
-  const pathName = usePathname();
+  const router = useRouter();
+  const [mounted, setMounted] = useState(false);
+  const pathName = router.pathname || "";
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -45,6 +51,11 @@ export default function Navbar(props: NavbarProps) {
         <nav className="hidden items-center gap-2 rounded-full px-2 py-2 shadow-md ring-1 ring-zinc-200 backdrop-blur-md dark:ring-accent/50 md:flex">
           <ul className="flex gap-2 text-sm font-medium">
             {props.routes.map((_link, index) => {
+              const linkPath = _link.href.split("#")[0];
+              const isHashLink = _link.href.includes("#");
+              const isActive = isHashLink
+                ? mounted && router.asPath.includes(_link.href)
+                : pathName === linkPath;
               return (
                 <li
                   key={index}
@@ -53,13 +64,13 @@ export default function Navbar(props: NavbarProps) {
                   <Link
                     href={_link.href}
                     className={classNames(
-                      pathName === _link.href
+                      isActive
                         ? "font-semibold text-background dark:hover:text-foreground"
                         : "text-foreground",
                       "group relative mx-3 rounded-full px-3 py-2 transition-colors duration-200",
                     )}
                   >
-                    {_link.href === pathName && (
+                    {isActive && (
                       <motion.span
                         layoutId="tab-pill"
                         animate={{

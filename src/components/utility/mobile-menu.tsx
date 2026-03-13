@@ -1,6 +1,5 @@
-import { Dispatch, Fragment, SetStateAction } from "react";
+﻿import { Dispatch, Fragment, SetStateAction, useEffect, useState } from "react";
 import { useRouter } from "next/router";
-import { usePathname } from "next/navigation";
 
 import { Dialog, Transition } from "@headlessui/react";
 
@@ -18,8 +17,13 @@ export default function MobileMenu({
   routes,
   setOpenMenu,
 }: MobileMenuProps) {
-  const pathName = usePathname();
   const router = useRouter();
+  const [mounted, setMounted] = useState(false);
+  const pathName = router.pathname || "";
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   const handleClick = (href: string) => {
     setOpenMenu(false);
@@ -41,24 +45,31 @@ export default function MobileMenu({
           >
             <Dialog.Panel className="pointer-events-none absolute flex min-h-[85%] w-full flex-col items-center justify-center overflow-y-auto rounded-b-2xl border-2 border-accent/20 bg-background px-6 py-8 text-accent shadow-lg shadow-accent/10 md:px-10 md:py-16">
               <div className="pointer-events-auto flex flex-col items-center gap-6 text-center">
-                {routes.map((link, i) => (
-                  <button
-                    key={i}
-                    className="group relative py-2 text-3xl font-medium"
-                    onClick={() => handleClick(link.href)}
-                  >
-                    <span
-                      className={classNames(
-                        pathName === link.href ? "w-full" : "w-0",
-                        "absolute -bottom-1 left-0 h-1 rounded-lg bg-accent transition-[width] duration-300 group-hover:w-full",
-                      )}
-                    ></span>
-                    {link.title}
-                  </button>
-                ))}
+                {routes.map((link, i) => {
+                  const linkPath = link.href.split("#")[0];
+                  const isHashLink = link.href.includes("#");
+                  const isActive = isHashLink
+                    ? mounted && router.asPath.includes(link.href)
+                    : pathName === linkPath;
+                  return (
+                    <button
+                      key={i}
+                      className="group relative py-2 text-3xl font-medium"
+                      onClick={() => handleClick(link.href)}
+                    >
+                      <span
+                        className={classNames(
+                          isActive ? "w-full" : "w-0",
+                          "absolute -bottom-1 left-0 h-1 rounded-lg bg-accent transition-[width] duration-300 group-hover:w-full",
+                        )}
+                      ></span>
+                      {link.title}
+                    </button>
+                  );
+                })}
                 <ThemeSwitch setClose={setOpenMenu} />
               </div>
-              <div className="absolute bottom-0 py-6">©2023 Amit Chauhan</div>
+              <div className="absolute bottom-0 py-6">©2026 Sanchezedu</div>
             </Dialog.Panel>
           </Transition.Child>
         </div>

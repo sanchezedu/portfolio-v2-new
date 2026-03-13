@@ -38,6 +38,7 @@ export type CoroselProps = {
 
 export default function Corosel({ aspectRatio = 1, images }: CoroselProps) {
   const [[page, direction], setPage] = useState([0, 0]);
+  const fallbackSrc = "/images/projects/portfolioLight.webp";
 
   const imageIndex = wrap(0, images.length, page);
 
@@ -47,13 +48,26 @@ export default function Corosel({ aspectRatio = 1, images }: CoroselProps) {
 
   return (
     <div className="relative w-full overflow-hidden" style={{ aspectRatio }}>
+      <div className="absolute left-0 top-0 z-10 flex h-7 w-full items-center gap-2 bg-background/80 px-3 backdrop-blur">
+        <span className="h-2 w-2 rounded-full bg-red-400"></span>
+        <span className="h-2 w-2 rounded-full bg-yellow-400"></span>
+        <span className="h-2 w-2 rounded-full bg-green-400"></span>
+      </div>
       <AnimatePresence initial={false} custom={direction}>
         <motion.img
           key={page}
           loading="lazy"
-          className="h-full w-full bg-cover"
+          alt="Vista previa del proyecto"
+          decoding="async"
+          className="h-full w-full object-cover object-top"
           style={{ aspectRatio }}
           src={images[imageIndex]}
+          onError={(event) => {
+            const img = event.currentTarget;
+            if (img.src !== fallbackSrc) {
+              img.src = fallbackSrc;
+            }
+          }}
           custom={direction}
           variants={variant}
           initial="enter"

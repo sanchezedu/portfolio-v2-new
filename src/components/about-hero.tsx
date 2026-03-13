@@ -1,4 +1,4 @@
-import Link from "next/link";
+﻿import Link from "next/link";
 
 import { AnimatePresence } from "framer-motion";
 
@@ -13,13 +13,13 @@ export default function AboutHero() {
         <AnimatePresence>
           <FadeUp key="hero-image" duration={0.6}>
             <DuotoneImage
-              src="https://avatars.githubusercontent.com/u/40375199?v=4"
+              src="/images/profile.png"
               width={100}
               height={100}
               className="h-auto w-full px-0 xl:px-16"
-              alt="Darth Gaming - Foto de perfil"
-              lightColor="#E0FFFF"
-              darkColor="#004D4D"
+              alt="Sanchezedu - Foto de perfil"
+              lightColor="#F1E6FF"
+              darkColor="#3B1B55"
               unoptimized
             />
           </FadeUp>
@@ -29,20 +29,23 @@ export default function AboutHero() {
         <AnimatePresence>
           <FadeUp key="title-greeting" duration={0.6}>
             <h1 className="text-6xl font-bold text-accent sm:text-7xl md:text-6xl lg:text-5xl xl:text-7xl">
-              Hola, soy Darth Gaming
+              Hola, soy Sanchezedu
             </h1>
           </FadeUp>
           <FadeUp key="description-1" duration={0.6} delay={0.2}>
             <p className="mt-8 text-base font-medium text-zinc-900 dark:text-zinc-300 sm:text-lg md:text-lg">
-              Convierto ideas en realidad con código. Me especializo en crear
-              sitios web modernos, rápidos y funcionales para negocios y
-              emprendedores. Mi pasión es el desarrollo web con tecnologías como
-              Next.js y Tailwind CSS.
+              Soy Ingeniero Civil graduado de ESPOL y desarrollador web
+              especializado en crear productos digitales que venden. He
+              trabajado como freelancer y emprendedor, levantando landing pages,
+              tiendas en línea y sitios corporativos para negocios locales.
             </p>
           </FadeUp>
           <FadeUp key="description-2" duration={0.6} delay={0.4}>
             <p className="mt-8 text-base font-medium text-zinc-900 dark:text-zinc-300 sm:text-lg md:text-lg">
-              Explora mis últimos{" "}
+              También he creado dashboards operativos, sistemas con bases de
+              datos y automatizaciones que optimizan procesos. He realizado
+              cursos de especialización en programación e inteligencia
+              artificial. Explora mis últimos{" "}
               <Link href="/projects" className="underline underline-offset-4">
                 <span className="text-accent">proyectos</span>
               </Link>{" "}

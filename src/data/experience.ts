@@ -1,36 +1,37 @@
-import { type ExperienceShowcaseListItemProps } from "@/components/experience/experience-showcase-list-item";
+﻿import { type ExperienceShowcaseListItemProps } from "@/components/experience/experience-showcase-list-item";
 
 export const EXPERIENCE: ExperienceShowcaseListItemProps[] = [
   {
-    title: "Software Developer",
+    title: "Freelancer & Consultor Web",
     organisation: {
-      name: "Skima",
-      href: "https://skima.ai/",
+      name: "Sanchezedu Studio",
+      href: "https://sanchezedu.dev",
     },
-    date: "Oct 2023 - Present",
-    location: "Mumbai",
-    description: "Reactjs and Nextjs app development",
+    date: "2021 - Presente",
+    location: "Ecuador / Remoto",
+    description:
+      "He trabajado con emprendimientos y negocios locales creando landing pages, e-commerce y sitios corporativos. Diseño experiencias rápidas y con enfoque en conversión, integrando analítica, formularios avanzados y automatizaciones para ventas.",
   },
   {
-    title: "Engineering Trainee",
+    title: "Desarrollador Full Stack",
     organisation: {
-      name: "Hexaware",
-      href: "https://hexaware.com/",
+      name: "Proyectos Propios",
+      href: "https://github.com/Sanchezedu",
     },
-    date: "July 2023 - Sep 2023",
-    location: "Remote",
+    date: "2020 - Presente",
+    location: "Guayaquil",
     description:
-      "Learned to work we monorepo and got to learn application architecture, scalling and build tooling to improve CI/CD of micro services.",
+      "He construido dashboards operativos, paneles administrativos y sistemas internos conectados a bases de datos. Trabajo con autenticación, roles, reportes y flujos para equipos pequeños y medianos.",
   },
   {
-    title: "Frontend Developer Intern",
+    title: "Emprendedor Digital",
     organisation: {
-      name: "Master Infotech",
-      href: "https://masterinfotech.com/",
+      name: "Negocios y Productos",
+      href: "https://sanchezedu.dev",
     },
-    date: "Winter - 2022",
-    location: "Remote",
+    date: "2019 - 2023",
+    location: "Guayaquil",
     description:
-      "Worked on a team responsible for developing new features and updating old codebases to latest technologies. Learned alot about web development and CI/CD development cycle.",
+      "He abierto y gestionado negocios digitales, validando ideas con MVPs y productos web. Me enfoco en ejecutar rápido, probar con usuarios reales y mejorar con base en datos.",
   },
 ];

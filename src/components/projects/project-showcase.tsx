@@ -73,7 +73,7 @@ export default function ProjectShowcase(props: ProjectShowcaseProps) {
           </AnimatePresence>
         </div>
         <h2 className="text-xl font-semibold text-accent sm:text-3xl">
-          My projects
+          Mis proyectos
         </h2>
         <div className="hidden flex-col gap-6 py-14 sm:gap-8 sm:py-20 md:gap-10 lg:flex">
           {props.projects.map((proj, index) => (
@@ -121,7 +121,7 @@ export default function ProjectShowcase(props: ProjectShowcaseProps) {
           className="group relative flex max-w-max items-center gap-4 text-base font-semibold sm:text-lg md:text-xl"
         >
           <div className="relative max-w-max">
-            <span className="text-accent">See more projects</span>
+            <span className="text-accent">Ver más proyectos</span>
             <span className="absolute -bottom-1 left-0 h-[2px] w-0 origin-left rounded-lg bg-accent transition-[width] duration-300 group-hover:w-full"></span>
           </div>
           <div className="h-8 w-8">

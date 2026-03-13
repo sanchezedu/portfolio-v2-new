@@ -7,10 +7,10 @@ import CustomTextarea from "@/components/utility/custom-textarea";
 import { type FormiKInputFieldProps } from "@/utility/types";
 
 export const mailValidationSchema = Yup.object({
-  email: Yup.string().email("Invalid email").required("Email required"),
-  name: Yup.string().required("Name required"),
-  subject: Yup.string().required("Subject required"),
-  message: Yup.string().required("Message required"),
+  email: Yup.string().email("Email inválido").required("Email requerido"),
+  name: Yup.string().required("Nombre requerido"),
+  subject: Yup.string().required("Asunto requerido"),
+  message: Yup.string().required("Mensaje requerido"),
 });
 
 export type ContactFormValues = Yup.InferType<typeof mailValidationSchema>;
@@ -26,31 +26,31 @@ export type FormFields = {
 const FormFieldsData: FormFields[] = [
   {
     name: "email",
-    label: "Email",
+    label: "Correo",
     type: "text",
     fieldType: "text",
-    placeholder: "Email",
+    placeholder: "Correo",
   },
   {
     name: "name",
-    label: "Name",
+    label: "Nombre",
     type: "text",
     fieldType: "text",
-    placeholder: "Name",
+    placeholder: "Nombre",
   },
   {
     name: "subject",
-    label: "Subject",
+    label: "Asunto",
     type: "text",
     fieldType: "text",
-    placeholder: "Subject",
+    placeholder: "Asunto",
   },
   {
     name: "message",
-    label: "Message",
+    label: "Mensaje",
     type: "text",
     fieldType: "textarea",
-    placeholder: "Message",
+    placeholder: "Mensaje",
   },
 ];
 
@@ -128,7 +128,7 @@ export default function ContactForm({
             </div>
           ))}
           <button
-            aria-label="send email"
+            aria-label="enviar correo"
             type="submit"
             className="mt-4 w-full rounded-full bg-background px-4 py-3 text-center text-lg font-semibold text-accent transition-colors duration-150 hover:bg-background/90 disabled:cursor-not-allowed disabled:bg-background/80"
             disabled={isSubmitting}
@@ -136,10 +136,10 @@ export default function ContactForm({
             {isSubmitting ? (
               <div className="inline-flex items-center space-x-2">
                 <Loader2Icon className="animate-spin" size={16} />
-                <span>Sending</span>
+                <span>Enviando</span>
               </div>
             ) : (
-              <span>Submit</span>
+              <span>Enviar</span>
             )}
           </button>
         </Form>

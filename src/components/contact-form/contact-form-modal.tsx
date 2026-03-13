@@ -38,7 +38,7 @@ export default function ContactFormModal({
         setToastState({
           type: "success",
           value: true,
-          message: "Successfully sent email",
+          message: "Correo enviado con éxito",
         });
         setShowModal(false);
       } else {
@@ -47,15 +47,15 @@ export default function ContactFormModal({
           value: true,
           message:
             response.status === 429
-              ? "Rate Limiter: Only 5 email per hour"
-              : "Oop! Unable to send email",
+              ? "Límite: solo 5 correos por hora"
+              : "No se pudo enviar el correo",
         });
       }
     } catch {
       setToastState({
         type: "failure",
         value: true,
-        message: "Oop! Unable to send email",
+        message: "No se pudo enviar el correo",
       });
     }
     setIsSendingMail(false);
@@ -93,7 +93,7 @@ export default function ContactFormModal({
                 <div className="flex items-center justify-between">
                   <Dialog.Title className="flex items-center gap-1 text-2xl font-semibold text-background sm:gap-2 md:text-4xl">
                     <MailIcon className="h-8 w-8 sm:h-10 sm:w-10" />
-                    <span>Send Message</span>
+                    <span>Enviar mensaje</span>
                   </Dialog.Title>
                   <button
                     className="flex h-10 w-10 items-center justify-center rounded-full border-2 border-accent bg-background p-2 text-sm text-accent transition-transform hover:scale-[1.05] hover:bg-background"

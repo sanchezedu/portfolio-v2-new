@@ -43,7 +43,7 @@ export default function ContactButton() {
       >
         <MailIcon className="h-6 w-6 sm:h-7 sm:w-7 lg:h-9 lg:w-9" />
         <span className="text-base font-semibold sm:text-lg lg:text-xl">
-          Send Message
+          Enviar mensaje
         </span>
       </button>
 
