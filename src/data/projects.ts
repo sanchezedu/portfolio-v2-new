@@ -1,125 +1,189 @@
 import { type ProjectCardProps } from "@/components/projects/project-card";
 import { type ProjectShowcaseListItem } from "@/components/projects/project-showcase-list";
-import { siteMetadata } from "@/data/siteMetaData.mjs";
+
+const defaultImages = {
+  LIGHT: "/images/projects/portfolioLight.webp",
+  DARK: "/images/projects/portfolioDark.webp",
+};
 
 export const PROJECT_SHOWCASE: ProjectShowcaseListItem[] = [
   {
     index: 0,
-    title: "Json Tree",
-    href: "/projects",
-    tags: ["Nextjs", "Tailwindcss", "Monaco Editor", "Vercel"],
-    image: {
-      LIGHT: "/images/projects/jsontreeLight.webp",
-      DARK: "/images/projects/jsontreeDark.webp",
-    },
+    title: "AutoTech",
+    href: "https://auto-tech-three.vercel.app",
+    tags: ["Next.js", "Tailwind CSS", "Automotriz"],
+    image: defaultImages,
   },
   {
     index: 1,
-    title: "Many Games",
-    href: "/projects",
-    tags: [
-      "Reactjs",
-      "Tailwindcss",
-      "Scss",
-      "Vite",
-      "React-router-dom",
-      "Redux",
-      "Vercel",
-    ],
-    image: {
-      LIGHT: "/images/projects/manyGamesLight.webp",
-      DARK: "/images/projects/manyGamesDark.webp",
-    },
+    title: "Delizia",
+    href: "https://delizia-restaurant.vercel.app",
+    tags: ["Next.js", "Tailwind CSS", "Restaurante"],
+    image: defaultImages,
   },
   {
     index: 2,
-    title: "Kanban",
-    href: "/projects",
-    tags: ["Reactjs", "Vite", "Tailwindcss", "Vercel", "Zustand", "React DND"],
-    image: {
-      LIGHT: "/images/projects/kanbanLight.webp",
-      DARK: "/images/projects/kanbanDark.webp",
-    },
+    title: "CivilEng",
+    href: "https://civil-engineering-gray.vercel.app",
+    tags: ["Next.js", "Tailwind CSS", "Ingeniería Civil"],
+    image: defaultImages,
+  },
+  {
+    index: 3,
+    title: "Aurora Cove",
+    href: "https://aurora-cove.vercel.app",
+    tags: ["Next.js", "Tailwind CSS", "Hotel Boutique"],
+    image: defaultImages,
+  },
+  {
+    index: 4,
+    title: "VisionOptica",
+    href: "https://vision-optica-premium.vercel.app",
+    tags: ["Next.js", "Tailwind CSS", "Óptica"],
+    image: defaultImages,
+  },
+  {
+    index: 5,
+    title: "Cookie Crush",
+    href: "https://cookie-shop-kappa.vercel.app",
+    tags: ["Next.js", "Tailwind CSS", "Galletas Gourmet"],
+    image: defaultImages,
+  },
+  {
+    index: 6,
+    title: "Vintage",
+    href: "https://vintage-collective.vercel.app",
+    tags: ["Next.js", "Tailwind CSS", "Antigüedades"],
+    image: defaultImages,
+  },
+  {
+    index: 7,
+    title: "Paws Clinic",
+    href: "https://paws-clinic-chi.vercel.app",
+    tags: ["Next.js", "Tailwind CSS", "Veterinaria"],
+    image: defaultImages,
+  },
+  {
+    index: 8,
+    title: "Inmob Premium",
+    href: "https://inmob-premium.vercel.app",
+    tags: ["Next.js", "Tailwind CSS", "Inmobiliaria"],
+    image: defaultImages,
+  },
+  {
+    index: 9,
+    title: "LexCorp",
+    href: "https://lexcorp-firma.vercel.app",
+    tags: ["Next.js", "Tailwind CSS", "Abogados"],
+    image: defaultImages,
+  },
+  {
+    index: 10,
+    title: "TransGlobal",
+    href: "https://transglobal-logistics.vercel.app",
+    tags: ["Next.js", "Tailwind CSS", "Logística"],
+    image: defaultImages,
   },
 ];
 
 export const PROJECTS_CARD: ProjectCardProps[] = [
   {
-    name: "Json tree",
-    favicon: "/images/projects/logos/jsontree.ico",
-    imageUrl: [
-      "/images/projects/jsontreeLight.webp",
-      "/images/projects/jsontreeDark.webp",
-    ],
-    description:
-      "Visualize JSON data format in form of a tree or graph. Application is made using Nextjs, Tailwindcss and Monaco Editor. Design image can be downloaded from this app.",
-    sourceCodeHref: "https://github.com/BUMBAIYA/jsontree",
-    liveWebsiteHref: "https://jsontree.vercel.app",
-  },
-  {
-    name: "Kanban app",
-    favicon: "/images/projects/logos/kanban.ico",
-    imageUrl: [
-      "/images/projects/kanbanLight.webp",
-      "/images/projects/kanbanDark.webp",
-      "/images/projects/kanbanCardLight.webp",
-    ],
-    description:
-      "Keep track of projects and tasks in different categories. Drag and drop card from tables. Assign user and priority to task and many more features. This app is made using Reactjs, Typescript, Tailwindcss and React-beautiful-dnd library.",
-    sourceCodeHref: "https://github.com/BUMBAIYA/kanban",
-    liveWebsiteHref: "https://kannban-board.vercel.app",
-  },
-  {
-    name: "Many Games",
-    favicon: "/images/projects/logos/manygames.ico",
-    imageUrl: [
-      "/images/projects/manyGamesDark.webp",
-      "/images/projects/manyGamesLight.webp",
-      "/images/projects/manyGames2048.webp",
-      "/images/projects/manyGamesPuzzle.webp",
-      "/images/projects/manyGamesWordle.webp",
-    ],
-    description:
-      "Many short and fun games using Reactjs, Typescript and Tailwindcss with collaboration with other developers",
-    sourceCodeHref: "https://github.com/BUMBAIYA/ManyGames",
-    liveWebsiteHref: "https://manygames.vercel.app",
-  },
-  {
-    name: "My portfolio",
+    name: "AutoTech",
     favicon: "/favicon.ico",
-    imageUrl: [
-      "/images/projects/portfolioDark.webp",
-      "/images/projects/portfolioLight.webp",
-    ],
+    imageUrl: ["https://via.placeholder.com/600x400?text=AutoTech"],
     description:
-      "My personal portfolio website made using Nextjs, tailwindcss and framer motion.",
-    sourceCodeHref: "https://github.com/BUMBAIYA/amitchauhan-v2",
-    liveWebsiteHref: siteMetadata.siteUrl,
+      "Sitio web para talleres automotrices con catálogo de servicios y contacto rápido.",
+    sourceCodeHref: "https://github.com/DarthGaming",
+    liveWebsiteHref: "https://auto-tech-three.vercel.app",
   },
   {
-    name: "Covid Tracker",
-    favicon: "/images/projects/logos/covidtracker.ico",
-    imageUrl: [
-      "/images/projects/covidTracker.webp",
-      "/images/projects/covidTrackerMap.webp",
-      "/images/projects/covidTrackerTable.webp",
-    ],
+    name: "Delizia",
+    favicon: "/favicon.ico",
+    imageUrl: ["https://via.placeholder.com/600x400?text=Delizia"],
     description:
-      "Get latest covid related stats in a table where user can filter using country and cases. It also has a map which show every countries data for quick view. It uses an open source api (disease.sh). Made using Reactjs, Javascript and MUI",
-    sourceCodeHref: "https://github.com/BUMBAIYA/CovidTracker",
-    liveWebsiteHref: "https://bumbaiya.github.io/CovidTracker",
+      "Sitio para restaurante con menú y reservas. Diseño limpio e intuitivo para clientes.",
+    sourceCodeHref: "https://github.com/DarthGaming",
+    liveWebsiteHref: "https://delizia-restaurant.vercel.app",
   },
   {
-    name: "Stock predictor",
-    favicon: "/images/projects/logos/stockpredictor.ico",
-    imageUrl: [
-      "/images/projects/stockPredictor.webp",
-      "/images/projects/stockPredictorCandleChart.webp",
-      "/images/projects/stockPredictorCompareChart.webp",
-      "/images/projects/stockPredictorLineChart.webp",
-    ],
+    name: "CivilEng",
+    favicon: "/favicon.ico",
+    imageUrl: ["https://via.placeholder.com/600x400?text=CivilEng"],
     description:
-      "Get prediction of opening and closing price of stocks price. Frontend is made using Reactjs and backend is made using Flask and Machine learning model are trained using Tensorflow",
-    sourceCodeHref: "https://github.com/Rohrschachh/Stock-Market-Predictor",
+      "Portfolio de servicios de ingeniería civil con galerías, secciones de proyectos y contacto.",
+    sourceCodeHref: "https://github.com/DarthGaming",
+    liveWebsiteHref: "https://civil-engineering-gray.vercel.app",
+  },
+  {
+    name: "Aurora Cove",
+    favicon: "/favicon.ico",
+    imageUrl: ["https://via.placeholder.com/600x400?text=Aurora+Cove"],
+    description:
+      "Landing page para hotel boutique con secciones de habitaciones, experiencias y reservas.",
+    sourceCodeHref: "https://github.com/DarthGaming",
+    liveWebsiteHref: "https://aurora-cove.vercel.app",
+  },
+  {
+    name: "VisionOptica",
+    favicon: "/favicon.ico",
+    imageUrl: ["https://via.placeholder.com/600x400?text=VisionOptica"],
+    description:
+      "Sitio web para óptica premium con catálogo de productos y formulario de contacto.",
+    sourceCodeHref: "https://github.com/DarthGaming",
+    liveWebsiteHref: "https://vision-optica-premium.vercel.app",
+  },
+  {
+    name: "Cookie Crush",
+    favicon: "/favicon.ico",
+    imageUrl: ["https://via.placeholder.com/600x400?text=Cookie+Crush"],
+    description:
+      "Tienda de galletas gourmet con presentación de productos y carrito de compra.",
+    sourceCodeHref: "https://github.com/DarthGaming",
+    liveWebsiteHref: "https://cookie-shop-kappa.vercel.app",
+  },
+  {
+    name: "Vintage",
+    favicon: "/favicon.ico",
+    imageUrl: ["https://via.placeholder.com/600x400?text=Vintage"],
+    description:
+      "Marketplace de antigüedades con catálogo de objetos, filtros y fichas de producto.",
+    sourceCodeHref: "https://github.com/DarthGaming",
+    liveWebsiteHref: "https://vintage-collective.vercel.app",
+  },
+  {
+    name: "Paws Clinic",
+    favicon: "/favicon.ico",
+    imageUrl: ["https://via.placeholder.com/600x400?text=Paws+Clinic"],
+    description:
+      "Sitio para clínica veterinaria con servicios, horarios y contacto directo.",
+    sourceCodeHref: "https://github.com/DarthGaming",
+    liveWebsiteHref: "https://paws-clinic-chi.vercel.app",
+  },
+  {
+    name: "Inmob Premium",
+    favicon: "/favicon.ico",
+    imageUrl: ["https://via.placeholder.com/600x400?text=Inmob+Premium"],
+    description:
+      "Portal inmobiliario con listado de propiedades y búsqueda avanzada.",
+    sourceCodeHref: "https://github.com/DarthGaming",
+    liveWebsiteHref: "https://inmob-premium.vercel.app",
+  },
+  {
+    name: "LexCorp",
+    favicon: "/favicon.ico",
+    imageUrl: ["https://via.placeholder.com/600x400?text=LexCorp"],
+    description:
+      "Sitio para firma de abogados con servicios, equipo y formularios de contacto.",
+    sourceCodeHref: "https://github.com/DarthGaming",
+    liveWebsiteHref: "https://lexcorp-firma.vercel.app",
+  },
+  {
+    name: "TransGlobal",
+    favicon: "/favicon.ico",
+    imageUrl: ["https://via.placeholder.com/600x400?text=TransGlobal"],
+    description:
+      "Portal de logística con seguimiento, servicios y contacto para clientes empresariales.",
+    sourceCodeHref: "https://github.com/DarthGaming",
+    liveWebsiteHref: "https://transglobal-logistics.vercel.app",
   },
 ];

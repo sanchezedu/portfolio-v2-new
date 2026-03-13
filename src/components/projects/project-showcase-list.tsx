@@ -1,5 +1,3 @@
-import Link from "next/link";
-
 import { motion } from "framer-motion";
 
 import { classNames } from "@/utility/classNames";
@@ -22,6 +20,8 @@ export interface ProjectShowcaseListProps {
 }
 
 export default function ProjectShowcaseList(props: ProjectShowcaseListProps) {
+  const isExternal = props.data.href.startsWith("http");
+
   return (
     <motion.div
       className={classNames("group flex gap-4 ")}
@@ -42,7 +42,12 @@ export default function ProjectShowcaseList(props: ProjectShowcaseListProps) {
         {props.data.index + 1}.
       </span>
       <div className="flex flex-col gap-2">
-        <Link href={props.data.href} className="relative max-w-max">
+        <a
+          href={props.data.href}
+          target={isExternal ? "_blank" : undefined}
+          rel={isExternal ? "noopener noreferrer" : undefined}
+          className="relative max-w-max"
+        >
           <span
             className={classNames(
               "hidden text-6xl font-semibold transition-colors duration-300 lg:block",
@@ -62,7 +67,7 @@ export default function ProjectShowcaseList(props: ProjectShowcaseListProps) {
               props.activeProject === props.data.index ? "w-full" : "w-0",
             )}
           ></span>
-        </Link>
+        </a>
         <p className="max-w-xl text-base font-semibold text-muted-foreground sm:text-lg">
           {props.data.tags.map((tag) => `#${tag} `)}
         </p>

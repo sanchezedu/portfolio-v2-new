@@ -10,18 +10,18 @@ export default function About() {
   return (
     <>
       <NextSeo
-        title="About Amit Chauhan | Software Developer"
-        description="Learn more about Amit Chauhan, a dedicated Software Developer with 2 years of experience. Discover the journey, skills, and passion that drive me to create innovative and user-friendly web solutions."
+        title="Sobre Darth Gaming | Desarrollador Web"
+        description="Conoce más sobre Darth Gaming, desarrollador web especializado en Next.js, React y Tailwind CSS. Descubre mi trayectoria, habilidades y pasión por crear soluciones web innovadoras."
         canonical={`${siteMetadata.siteUrl}/about`}
         openGraph={{
           url: `${siteMetadata.siteUrl}/about`,
-          title: "Learn About Amit Chauhan - Software Developer",
+          title: "Sobre Darth Gaming - Desarrollador Web",
           description:
-            "Dive into the story of Amit Chauhan, a Software Developer. Uncover the experiences, skills, and passion that fuel a commitment to delivering exceptional web solutions.",
+            "Descubre la historia de Darth Gaming, desarrollador web. Explora las experiencias, habilidades y pasión que impulsan la creación de soluciones web excepcionales.",
           images: [
             {
               url: `${siteMetadata.siteUrl}${siteMetadata.twitterImage}`,
-              alt: "Amit Chauhan - Portfolio Image",
+              alt: "Darth Gaming - Portfolio",
             },
           ],
           siteName: siteMetadata.siteName,
@@ -34,7 +34,7 @@ export default function About() {
           {
             property: "keywords",
             content:
-              "Software Developer portfolio, Software Developer, React Developer, Frontend Developer, Web Developer, JavaScript, HTML, CSS, Professional Journey, Skills, Passion for Web Development",
+              "Portfolio desarrollador web, Next.js, React, Tailwind CSS, JavaScript, HTML, CSS, trayectoria profesional, habilidades, pasión desarrollo web",
           },
         ]}
       />

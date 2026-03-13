@@ -86,30 +86,35 @@ export default function ProjectShowcase(props: ProjectShowcaseProps) {
           ))}
         </div>
         <div className="flex flex-col gap-4 py-14 sm:gap-8 sm:py-20 md:gap-10 lg:hidden">
-          {props.projects.map((proj) => (
-            <Link
-              key={proj.title}
-              href={proj.href}
-              className="flex flex-col gap-1"
-            >
-              <div className="flex gap-2">
-                <span className="text-3xl font-semibold text-accent transition-colors duration-300 sm:text-4xl md:text-5xl lg:hidden">
-                  {proj.index + 1}.
-                </span>
-                <span
-                  key={proj.title}
-                  className="-underline-offset-1 text-3xl font-semibold text-accent underline transition-colors duration-300 sm:text-4xl md:text-5xl lg:hidden"
-                >
-                  {proj.title}
-                </span>
-              </div>
-              <p className="flex max-w-xl flex-wrap gap-2 text-base font-semibold text-accent-foreground sm:text-lg">
-                {proj.tags.map((tag, index) => (
-                  <span key={index}>#{tag}</span>
-                ))}
-              </p>
-            </Link>
-          ))}
+          {props.projects.map((proj) => {
+            const isExternal = proj.href.startsWith("http");
+            return (
+              <a
+                key={proj.title}
+                href={proj.href}
+                target={isExternal ? "_blank" : undefined}
+                rel={isExternal ? "noopener noreferrer" : undefined}
+                className="flex flex-col gap-1"
+              >
+                <div className="flex gap-2">
+                  <span className="text-3xl font-semibold text-accent transition-colors duration-300 sm:text-4xl md:text-5xl lg:hidden">
+                    {proj.index + 1}.
+                  </span>
+                  <span
+                    key={proj.title}
+                    className="-underline-offset-1 text-3xl font-semibold text-accent underline transition-colors duration-300 sm:text-4xl md:text-5xl lg:hidden"
+                  >
+                    {proj.title}
+                  </span>
+                </div>
+                <p className="flex max-w-xl flex-wrap gap-2 text-base font-semibold text-accent-foreground sm:text-lg">
+                  {proj.tags.map((tag, index) => (
+                    <span key={index}>#{tag}</span>
+                  ))}
+                </p>
+              </a>
+            );
+          })}
         </div>
         <Link
           href="/projects"
